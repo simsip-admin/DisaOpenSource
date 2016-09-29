@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disa.Terminal", "Disa.Terminal\Disa.Terminal.csproj", "{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}"
 EndProject
@@ -21,12 +21,18 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Disa.Framework.Shared", "Di
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Disa.Framework.Mobile.Shared", "Disa.Framework.Mobile.Shared\Disa.Framework.Mobile.Shared.shproj", "{3EC88EF4-ED80-4B79-9B7E-E842A94076A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disa.Framework.Slack", "Disa.Framework.Slack\Disa.Framework.Slack.csproj", "{4843C893-3EA6-4C2C-B43B-0E7687D556B0}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Disa.Framework.Mobile.Shared\Disa.Framework.Mobile.Shared.projitems*{3ec88ef4-ed80-4b79-9b7e-e842a94076a7}*SharedItemsImports = 13
 		Disa.Framework.Telegram.Shared\Disa.Framework.Telegram.Shared.projitems*{575dce77-4e2e-46e0-9bb8-fa8e5c912bfa}*SharedItemsImports = 4
+		Disa.Framework.Shared\Disa.Framework.Shared.projitems*{78848cf0-7246-4463-a01f-b6e2a8133196}*SharedItemsImports = 13
+		Disa.Framework.Mobile.Shared\Disa.Framework.Mobile.Shared.projitems*{82cc4d09-0ef8-4fa2-b339-5da808f27856}*SharedItemsImports = 4
 		Disa.Framework.Telegram.Mobile.Shared\Disa.Framework.Telegram.Mobile.Shared.projitems*{8f00a2d9-308c-4e57-b9c4-56c418e502d5}*SharedItemsImports = 13
-		Disa.Framework.Telegram.Shared\Disa.Framework.Telegram.Shared.projitems*{f9134193-59ef-48b9-bbeb-5b663b171288}*SharedItemsImports = 13
+		Disa.Framework.Shared\Disa.Framework.Shared.projitems*{9f73b5c0-ccec-43b5-9298-e1f1d6826169}*SharedItemsImports = 4
 		Disa.Framework.Telegram.Mobile.Shared\Disa.Framework.Telegram.Mobile.Shared.projitems*{bf8cc773-49f3-45ed-8653-ebecee6b8d11}*SharedItemsImports = 4
+		Disa.Framework.Telegram.Shared\Disa.Framework.Telegram.Shared.projitems*{f9134193-59ef-48b9-bbeb-5b663b171288}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,25 +42,53 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Debug|x86.Build.0 = Debug|Any CPU
+		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Release|x86.ActiveCfg = Release|Any CPU
+		{BA286D80-EFDC-4237-A1EF-A925BD9EC7B6}.Release|x86.Build.0 = Release|Any CPU
 		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Debug|x86.Build.0 = Debug|Any CPU
 		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Release|x86.ActiveCfg = Release|Any CPU
+		{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}.Release|x86.Build.0 = Release|Any CPU
 		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Debug|x86.Build.0 = Debug|Any CPU
 		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Release|x86.ActiveCfg = Release|Any CPU
+		{575DCE77-4E2E-46E0-9BB8-FA8E5C912BFA}.Release|x86.Build.0 = Release|Any CPU
 		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Debug|x86.Build.0 = Debug|Any CPU
 		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Release|x86.ActiveCfg = Release|Any CPU
+		{82CC4D09-0EF8-4FA2-B339-5DA808F27856}.Release|x86.Build.0 = Release|Any CPU
 		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Debug|x86.Build.0 = Debug|Any CPU
 		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Release|x86.ActiveCfg = Release|Any CPU
+		{BF8CC773-49F3-45ED-8653-EBECEE6B8D11}.Release|x86.Build.0 = Release|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Debug|x86.Build.0 = Debug|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Release|x86.ActiveCfg = Release|Any CPU
+		{4843C893-3EA6-4C2C-B43B-0E7687D556B0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

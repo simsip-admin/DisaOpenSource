@@ -71,6 +71,10 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCL.native.sqlite3.v110_xp.0.9.2\build\SQLitePCL.native.sqlite3.v110_xp.targets" Condition="Exists('..\packages\SQLitePCL.native.sqlite3.v110_xp.0.9.2\build\SQLitePCL.native.sqlite3.v110_xp.targets')" />
   <ItemGroup>
+    <ProjectReference Include="..\Disa.Framework.Slack\Disa.Framework.Slack.csproj">
+      <Project>{4843c893-3ea6-4c2c-b43b-0e7687d556b0}</Project>
+      <Name>Disa.Framework.Slack</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Disa.Framework\Disa.Framework.csproj">
       <Project>{9F73B5C0-CCEC-43B5-9298-E1F1D6826169}</Project>
       <Name>Disa.Framework</Name>

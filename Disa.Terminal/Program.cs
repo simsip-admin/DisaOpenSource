@@ -9,6 +9,7 @@ using Mono.Cecil;
 using System.Threading.Tasks;
 using System.Text;
 using RegawMOD.Android;
+using Disa.Framework.Slack;
 
 namespace Disa.Terminal
 {
@@ -20,7 +21,7 @@ namespace Disa.Terminal
         {
             Console.WriteLine("Welcome to Disa.Terminal!");
 
-			Initialize(new Service[] { new Telegram() });
+			Initialize(new Service[] { new SlackMessenger() });
 
             Console.WriteLine("Initialized.");
 
